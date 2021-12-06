@@ -14,7 +14,26 @@ using System.Windows.Forms;
 namespace HumanFitnessProjectClasses
 {
     public partial class WelcomePage : Form
-    {
+    {/*
+    Name: Ronald (Tony) Hickman  Date: 12/05/2021   
+    Program Description: Assignment: Final Project - Incremental Deliverables Due 22Nov21
+    Estimated Completion Time: 10 Hours
+    
+    Thursday 12/02/2021: 6 Hours - Worked on UX, labels, textboxes, etc.
+    Friday 12/03/2021: 4 Hours   - Worked on building the classes and figuring out the inheritance.
+                                   Did some intitial work on validation and ecapsulation.
+    Saturday 12/04/2021 6 Hours  - Built in all validation, most methods and finished all
+                                   all aspects of inheritance. 
+    Sunday 12/05/2021   5 Hours  - Performed code clean up, odds and ends and truoble shot
+                                   message box problems between classes. Created methods for
+                                   message boxes.
+        The total time for this program was 21 hours. this is more than double my initial
+    estimate, but I am fairly happy with the result. I learned a great deal with this small
+    project, and am adding to my intuitive grasp of the cocepts. Inheritance, encapsulation,
+    and object oriented programming in general are becoming much clearer to me.
+    It is still very hard for me to estimate time on a project, because I still don't know
+    exactly what I don't know, or how long it will take me to learn. I am continuing to refine
+    my process annd count this weeks assignment as a major victory in that area.*/
         public WelcomePage()
         {
             InitializeComponent();           
