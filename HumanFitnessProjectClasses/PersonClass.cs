@@ -2,25 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HumanFitnessProjectClasses
 {
     public class PersonClass
     {
+        protected string firstName;
+        protected string lastName;
+        protected string dateOfBirth;
+        protected string emailAddress;
+
+
         public PersonClass(string firstName, string lastName, string dateOfBirth,
             string emailAddress)
         {
-            firstName = firstName;
-            lastName = lastName;
-            dateOfBirth = dateOfBirth;
-            emailAddress = emailAddress;
+            //EmailValidation
+            Regex validate_emailaddress = DataValidation.EmailValidation();
+
+            if (validate_emailaddress.IsMatch(emailAddress) != true)
+            {
+                MessageBox.Show("Invalid Email Address!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
+
+            
                 
         }
-        protected string firstName { get; set; }
-        protected string lastName { get; set; }
-        protected string dateOfBirth { get; set; }
-        protected string emailAddress { get; set; }
 
-    }
-}
+        
+
+        }
+        }
+    
+

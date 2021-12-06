@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HumanFitnessProjectClasses
 {
     public class ClientClass : PotentialClientClass
     {
+        protected string clientID;
+        protected string phoneNumber;
+
         public ClientClass(string firstName, string lastName, string dateOfBirth,
-            string emailAddress, string address, bool onEmailList, bool signedWaiver,
-            string clientID, string phoneNumber, int sessionsLeft, string height,
-            string weight, int bMI)
+            string emailAddress, string address, bool onEmailList,
+            string clientID, string phoneNumber)
             : base (firstName, lastName, dateOfBirth, emailAddress, address, onEmailList)
         {
-            signedWaiver = signedWaiver;
-            clientID = clientID;
-            phoneNumber = phoneNumber;
-            sessionsLeft = sessionsLeft;
-            height = height;
-            weight = weight;
-            bMI = bMI;
+            clientID = "1001";
+            Regex validate_phoneNumber = DataValidation.PhoneNumberValidation();
+
+            if (validate_phoneNumber.IsMatch(phoneNumber) != true)
+            {
+                MessageBox.Show("Invalid Phone Number!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+           
+
         }
-        public bool signedWaiver { get; set; }
-        public string clientID { get; set; }
-        public string phoneNumber { get; set; }
-        public int sessionsLeft { get; set; }
-        public string height { get; set; }
-        public string weight { get; set; }
-        public int bMI { get; set; }
+        
     }
 }
